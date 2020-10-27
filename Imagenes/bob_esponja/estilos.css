@@ -1,0 +1,27 @@
+body {
+    background:#f5EE31; /*Este es el color del cuerpo de Bob*/
+    width: 300px;   /*Este es el ancho del personaje total*/
+    height: 400px; /*Y como adivinaran, esta es la altura total*/
+    border: 5px solid #000; /*En orden: 5px: ancho del borde, solid: tipo de borde, #000: sería el color de este*/
+    position:relative; /*Esto es fundamental a la hora de posicionar los demas elementos dentro de Bob*/
+    margin:50px auto; /*50px arriba y abajo, auto para centrar nuestro dibujo*/
+    overflow: hidden; /*todos los elementos que se pasen de Bob, seran borrados, desapareceran.*/
+};
+/*Ojos*/
+.ojos {
+    position: absolute; /*Por la posicion del body (relative) todo lo que irá adentro tendrá posicion absolute*/
+    left: 600px; /*Esto desplazará nuestros ojos hacia la derecha 40px*/
+    top: 60px; /*y 40px de arriba hacia abajo*/
+    width: 210px;
+    z-index:10; /*En que tamaño de la capa va a estar. Sería en qué profundidad*/
+}
+
+.ojo {
+    background: #fff;
+    position: relative; /*Es para ubicarlos y que uno pueda superponer al otro*/
+    border:5px solid #000;
+    width:100px ; /*Ancho total del ojo*/
+    height: 100px; /*Como es una circunferencia, también tiene 100px*/
+    margin-right:-17px ; /*para tener una separación entre los ojos*/
+    display: inline-block;
+}
